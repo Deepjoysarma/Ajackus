@@ -27,10 +27,10 @@ const UserForm = ({ onSuccess, onUpdate, editingUser, setEditingUser }) => {
     try {
       let response;
       if (editingUser) {
-        response = await axios.put(`http://localhost:5000/users/${editingUser.id}`, user);
+        response = await axios.put(`https://ajackus-backend-00q1.onrender.com/users/${editingUser.id}`, user);
         onUpdate(response.data);
       } else {
-        response = await axios.post("http://localhost:5000/users", user);
+        response = await axios.post("https://ajackus-backend-00q1.onrender.com/users", user);
         onSuccess(response.data);
       }
 
