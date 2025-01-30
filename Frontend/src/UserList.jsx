@@ -9,7 +9,7 @@ const UserList = () => {
 
   
   const fetchUsers = () => {
-    axios.get("http://localhost:5000/users")
+    axios.get("https://ajackus-backend-00q1.onrender.com/users")
       .then((res) => setUsers(res.data))
       .catch(() => setError("Failed to load users"));
   };
@@ -30,7 +30,7 @@ const UserList = () => {
 
   // Delete user function
   const deleteUser = (id) => {
-    axios.delete(`http://localhost:5000/users/${id}`)
+    axios.delete(`https://ajackus-backend-00q1.onrender.com/users/${id}`)
       .then(() => setUsers(users.filter(user => user.id !== id)))
       .catch(() => setError("Failed to delete user"));
   };
